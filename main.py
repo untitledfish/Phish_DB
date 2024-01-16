@@ -1,4 +1,5 @@
 import discord
+import Dtoken
 from discord.ext import commands
 from discord import Interaction 
 
@@ -32,5 +33,5 @@ async def ping(ctx):
  #   bot_latency = round(client.latency*1000)
  #   await interaction.response.send_message(f"Pong!... {bot_latency}ms")
 
-client.run("MTE5NjkzMzQ5MTI2MzI5MTQ4Mw.GD2uL6.kOxkRiGcXpanguH4YDkUQBJE-dnwSB-HYhzSTE")
+client.run(Dtoken.discordToken)
 
