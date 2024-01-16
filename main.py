@@ -33,5 +33,5 @@ async def ping(ctx):
  #   bot_latency = round(client.latency*1000)
  #   await interaction.response.send_message(f"Pong!... {bot_latency}ms")
 
-client.run(Dtoken.discordToken) # in an early version this actually contained the token (fuck)
+client.run(Dtoken.TOKEN) # in an early version this actually contained the token (fuck)
 
