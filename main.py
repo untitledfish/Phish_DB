@@ -1,37 +1,22 @@
+import os
 import discord
 import Dtoken
 from discord.ext import commands
 from discord import Interaction 
 
-client = commands.Bot(command_prefix = "*", intents = discord.Intents.all())
+client = commands.Bot(command_prefix="*", intents=discord.Intents.all(), help_command=None)
+GUILD = os.getenv('DISCORD_GUILD')
 
 @client.event
 async def on_ready():
     # set client activity and status
-    await client.change_presence(activity = discord.activity.Game(name = 
-                "fucking fish"), status = discord.Status.do_not_disturb)
-    print(f"{client.user.name} is bouta cum")
+    await client.change_presence(activity=discord.activity.Game(name = 
+                "fucking fish"), status=discord.Status.do_not_disturb)
+    print(f"{client.user.name} is bouta cum") # this bot edges constantly
 
-@client.command() # a list of help options for when people are retarded
-async def helpme(ctx):
-    await ctx.send("okay dumbass, here's what I do:\n\n"
-            "*hello - greets new people correctly\n"
-            "*ping - pong!")
 
-@client.command() # this is how you greet people in phish tank
-async def hello(ctx):
-    await ctx.send("auto's first wet dream was gay")
+random = ["The second tower has been hit", "okay vaginal spewage",
+        "does your ass ever get jealous of the shit that comes out of your mouth?"]
 
-@client.command()
-async def ping(ctx):
-    bot_latency = round(client.latency*1000)
-    await ctx.send(f"Pong!... {bot_latency}ms")
-
-# shit don't work but it's fine i didn't want slash commands anyway
-#@client.tree.command(name = "ping", description = "pong")
-#async def ping(interaction : Interaction):
- #   bot_latency = round(client.latency*1000)
- #   await interaction.response.send_message(f"Pong!... {bot_latency}ms")
-
-client.run(Dtoken.TOKEN) # in an early version this actually contained the token (fuck)
+client.run(Dtoken.TOKEN)
 
