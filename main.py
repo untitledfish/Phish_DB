@@ -11,12 +11,8 @@ GUILD = os.getenv('DISCORD_GUILD')
 async def on_ready():
     # set client activity and status
     await client.change_presence(activity=discord.activity.Game(name = 
-                "fucking fish"), status=discord.Status.do_not_disturb)
+                "fucking a fish"), status=discord.Status.do_not_disturb)
     print(f"{client.user.name} is bouta cum") # this bot edges constantly
-
-
-random = ["The second tower has been hit", "okay vaginal spewage",
-        "does your ass ever get jealous of the shit that comes out of your mouth?"]
 
 client.run(Dtoken.TOKEN)
 
